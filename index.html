@@ -461,16 +461,16 @@
                                 <div class="form-group col-sm-6">
                                     <input id="rsvpFormName" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu Nombre"/>
                                 </div>
-                                <div id="rsvpFormNumber" class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu Nro de Celular"/>
+                                <div class="form-group col-sm-6">
+                                    <input id="rsvpFormNumber" type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Tu Nro de Celular"/>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <input id="rsvpFormQuantity" type="number" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Cuántos son?"/>
                                 </div>
-                                <div id="rsvpFormEvents" class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
+                                <div class="form-group col-sm-6">
+                                    <select id="rsvpFormEvents" class="form-control bg-secondary border-0" style="height: 52px;">
                                         <option>Voy a todos los eventos</option>
                                         <option>Voy al civil</option>
                                         <option>Voy a la iglesia</option>
@@ -478,8 +478,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div id="rsvpFormMessage" class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
+                            <div class="form-group">
+                                <textarea id="rsvpFormMessage" class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Mensaje" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Enviar</button>
@@ -541,7 +541,15 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("hQNJP7sfIZUO45QgI");
+    })();
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
