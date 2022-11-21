@@ -1,4 +1,3 @@
-const Swal = require('sweetalert2')
 const form = document.getElementById("rsvpForm");
 
 form.addEventListener("submit", (e) => {
@@ -19,19 +18,14 @@ form.addEventListener("submit", (e) => {
 
   emailjs.send("service_f95vqrh", "template_htjya3e", params).then((res) => {
     if (res.status == 200) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Mail enviado!',
-        showConfirmButton: false,
-        timer: 1500
-      })
+      alert("Mensaje enviado!)
       document.getElementById("rsvpFormName").value = "";
       document.getElementById("rsvpFormNumber").value = "";
       document.getElementById("rsvpFormEvents").value = "";
       document.getElementById("rsvpFormQuantity").value = "";
       document.getElementById("rsvpFormMessage").value = "";
     } else {
-      Swal.fire('Error, intente nuevamente.')
+      alert('Error, intente nuevamente.')
     }
   });
 });
