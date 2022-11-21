@@ -1,7 +1,7 @@
 const form = document.getElementById("rsvpForm");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", event => {
+  event.preventDefault();
   const name = document.getElementById("rsvpFormName").value,
     number = document.getElementById("rsvpFormNumber").value,
     events = document.getElementById("rsvpFormEvents").value,
