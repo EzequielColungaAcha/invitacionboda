@@ -18,14 +18,24 @@ form.addEventListener("submit", event => {
 
   emailjs.send("service_f95vqrh", "template_htjya3e", params).then((res) => {
     if (res.status == 200) {
-      alert("Mensaje enviado!")
+      //alert("Mensaje enviado!")
+      Swal.fire({
+        icon: 'success',
+        title: 'Mensaje enviado',
+        showConfirmButton: true
+      })
       document.getElementById("rsvpFormName").value = "";
       document.getElementById("rsvpFormNumber").value = "";
       document.getElementById("rsvpFormEvents").value = "";
       document.getElementById("rsvpFormQuantity").value = "";
       document.getElementById("rsvpFormMessage").value = "";
     } else {
-      alert('Error, intente nuevamente.')
+      //alert('Error, intente nuevamente.')
+      Swal.fire({
+        icon: 'error',
+        title: 'Error, intente nuevamente.',
+        showConfirmButton: true
+      })
     }
   });
 });
