@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
 
   emailjs.send("service_f95vqrh", "template_htjya3e", params).then((res) => {
     if (res.status == 200) {
-      alert("Mensaje enviado!)
+      alert("Mensaje enviado!")
       document.getElementById("rsvpFormName").value = "";
       document.getElementById("rsvpFormNumber").value = "";
       document.getElementById("rsvpFormEvents").value = "";
